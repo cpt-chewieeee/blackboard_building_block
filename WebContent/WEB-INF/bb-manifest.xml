@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE xml>
+<manifest>
+  <!-- core extension information -->
+  <plugin>
+    <name value= "Pragmatic Plugin"/>
+    <handle value= "Pragmatic Challenge"/>
+    <description value= "This plugin is an example."/>
+    <version value= "1.0.0"/>
+    <requires>
+    	<bbversion value="9.0.0"/>
+    </requires>
+    <vendor>
+      <id value="pr"/>
+      <name value="Pragmatic Solution Inc."/>
+      <url value="http://www.pr-sol.com/" />
+      <description value="Stuff" />
+    </vendor>
+    <http-actions>
+    	<config value="" />
+    	<remove value="" />
+    </http-actions>
+    
+    <!-- Tools defined by this extension -->
+    <application-defs>
+      <application handle="challengeapp" type="shared" use-ssl="false" name="ChallengeMe App" can-allow-guest="true"
+       small-icon="" large-icon="">
+        <description>Application installed as part of the sample plugin</description>
+        <links>
+           <link>
+            <type value="course_tool"/>
+            <name value="ChallengeMe Bulding Block"/>
+            <url value="ChallengeMe.jsp" />
+            <description value="Curtin University." />
+            <icons>
+              <listitem value="images/icon.gif"/>
+            </icons>
+          </link>
+        </links>
+      </application>
+    </application-defs>
+    
+    
+
+    <!-- code permissions required for proper operation -->
+    <permissions>
+      <permission type="persist" name="Content" actions="create,modify,delete"/>
+      <permission type="attribute" name="user.authinfo" actions="get,set"/>
+      <permission type="attribute" name="user.personalinfo" actions="get,set"/>
+    </permissions>
+  </plugin>
+
+</manifest>
